@@ -100,6 +100,7 @@ MonoBehaviour:
   moveSpeed: 5.3
   jumpSpeed: 4.4
   jumpBuffer: 0.1
+  invertDirection: 0
   platformLayerMask:
     serializedVersion: 2
     m_Bits: 1024
@@ -126,7 +127,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 5945705927590371195}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 663d526a7b2f9474d95bd52e15a4d739, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
