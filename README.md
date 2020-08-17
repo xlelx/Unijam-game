@@ -8,7 +8,7 @@
 - Feature Branches 
 
 **Name conventions:** 
-- feature/<name-of-the-feature> 
+- `feature/[name-of-the-feature]` 
 
 **Merge Methods:** 
 - Pull requests or direct merge (2 ppl, no one cares lol) 
