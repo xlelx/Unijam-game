@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 404113943}
   - component: {fileID: 404113942}
   - component: {fileID: 404113941}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: main_lev_buildB_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,8 +324,8 @@ GameObject:
   - component: {fileID: 1649056558}
   - component: {fileID: 1649056557}
   - component: {fileID: 1649056556}
-  - component: {fileID: 1649056555}
   - component: {fileID: 1649056554}
+  - component: {fileID: 1649056555}
   m_Layer: 0
   m_Name: character_anim
   m_TagString: Untagged
@@ -347,6 +347,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5.3
   jumpSpeed: 4.4
+  jumpBuffer: 0.1
+  platformLayerMask:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!50 &1649056555
 Rigidbody2D:
   serializedVersion: 4
@@ -367,7 +371,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1649056556
 BoxCollider2D:
   m_ObjectHideFlags: 0
