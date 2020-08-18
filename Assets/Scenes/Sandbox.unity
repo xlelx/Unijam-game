@@ -234,13 +234,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b309e7bd922525445a2083d61a691b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player1: {fileID: 2133864493}
-  player2: {fileID: 1945742032}
   offset: {x: 0, y: 2}
   smoothTime: 0.5
-  minZoom: 10
-  maxZoom: 5
+  minZoom: 30
+  maxZoom: 10
   zoomLimiter: 50
+  player1: {fileID: 2133864493}
+  player2: {fileID: 1945742032}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
