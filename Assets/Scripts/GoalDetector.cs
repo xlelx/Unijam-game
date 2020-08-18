@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class GoalDetector : MonoBehaviour
 {
-
     private int numInGoal = 0;  
     private void Update() {
         if (numInGoal == 2){
-
-            //TODO change scene
+            //TODO animations or somestuff before loading the next level
+            LevelLoader.Load(LevelLoader.Scene.Level01);
             Debug.Log("Level Complete!");
         }    
     }
