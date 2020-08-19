@@ -43,12 +43,16 @@ public class CharacterController : MonoBehaviour
         rb.velocity = new Vector2(movement * moveSpeed, rb.velocity.y);
 
 
-        //Jumping
+        //Check for jump
+        Jump(this.jumpSpeed);
+    }
+
+    void Jump(float jumpSpeed){
         if (isGrounded() && Input.GetButtonDown("Jump")){
             rb.velocity = new Vector3(rb.velocity.x , rb.velocity.y + jumpSpeed);
         }
-    }
 
+    }
     bool isGrounded(){
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0f, Vector2.down, jumpBuffer, platformLayerMask);
 
