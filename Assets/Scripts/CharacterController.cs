@@ -18,7 +18,7 @@ public class CharacterController : MonoBehaviour
     public bool invertDirection = false;
 
     [SerializeField]
-    private LayerMask platformLayerMask;
+    public LayerMask platformLayerMask;
 
     private Rigidbody2D rb;
     private float movement;
