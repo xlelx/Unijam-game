@@ -28,11 +28,15 @@ public class PlayerPush : MonoBehaviour
             box = hit.collider.gameObject;
 
             box.GetComponent<FixedJoint2D>().enabled = true;
+            box.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
 
             box.GetComponent<FixedJoint2D>().connectedBody = this.GetComponent<Rigidbody2D>();
-        } else if(Input.GetKeyUp(KeyCode.E))
+        } 
+        else if(Input.GetKeyUp(KeyCode.E))
         {
             box.GetComponent<FixedJoint2D>().enabled = false;
+            box.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+
         }
     }
 
