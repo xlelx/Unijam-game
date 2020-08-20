@@ -6,6 +6,7 @@ public class JumpPad : MonoBehaviour
 {
     public float jumpSpeed = 20f;
 
+
     // Update is called once per frame
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "Player"){
