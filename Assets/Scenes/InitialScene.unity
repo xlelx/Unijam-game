@@ -1265,7 +1265,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!255 &758978225
 FixedJoint2D:
   m_ObjectHideFlags: 0
@@ -1411,7 +1411,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 959201333}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -1423,7 +1423,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!61 &959201336
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1717,7 +1717,7 @@ PrefabInstance:
     - target: {fileID: 5945705927590371192, guid: 80aef93b035bfca40887e19fc4733df9,
         type: 3}
       propertyPath: platformLayerMask.m_Bits
-      value: 512
+      value: 1536
       objectReference: {fileID: 0}
     - target: {fileID: 5945705927590371192, guid: 80aef93b035bfca40887e19fc4733df9,
         type: 3}

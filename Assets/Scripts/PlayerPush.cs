@@ -24,7 +24,7 @@ public class PlayerPush : MonoBehaviour
 
         if(hit.collider != null && Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("Reach");
+            //Debug.Log("Reach");
             box = hit.collider.gameObject;
 
             box.GetComponent<FixedJoint2D>().enabled = true;
