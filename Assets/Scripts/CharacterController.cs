@@ -25,7 +25,8 @@ public class CharacterController : MonoBehaviour
     private BoxCollider2D boxCollider;
 
 
-    void Start(){
+    void Start()
+    {
         rb = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
     }
@@ -33,27 +34,34 @@ public class CharacterController : MonoBehaviour
     void Update()
     {
         //Horizontal movement
-        movement = Input.GetAxis("Horizontal") * (invertDirection ?  -1 : 1);
-        if (movement < 0f){
+        movement = Input.GetAxis("Horizontal") * (invertDirection ? -1 : 1);
+        if (movement < 0f)
+        {
             transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x) * -1, transform.localScale.y);
         }
-        else if (movement > 0f){
+        else if (movement > 0f)
+        {
             transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x), transform.localScale.y);
         }
         rb.velocity = new Vector2(movement * moveSpeed, rb.velocity.y);
 
 
         //Check for jump
-        Jump(this.jumpSpeed);
-    }
 
-    void Jump(float jumpSpeed){
-        if (isGrounded() && Input.GetButtonDown("Jump")){
-            rb.velocity = new Vector3(rb.velocity.x , rb.velocity.y + jumpSpeed);
+        if (isGrounded() && Input.GetButtonDown("Jump"))
+        {
+            Jump(this.jumpSpeed);
         }
 
     }
-    bool isGrounded(){
+
+    public void Jump(float jumpSpeed)
+    {
+        rb.velocity = new Vector3(rb.velocity.x, jumpSpeed);
+
+    }
+    bool isGrounded()
+    {
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0f, Vector2.down, jumpBuffer, platformLayerMask);
 
         return raycastHit.collider != null;
