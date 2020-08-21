@@ -26,6 +26,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8830159707385070672, guid: 80aef93b035bfca40887e19fc4733df9,
+        type: 3}
+      propertyPath: lowJumpMultiplier
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8830159707385070673, guid: 80aef93b035bfca40887e19fc4733df9,
         type: 3}
       propertyPath: m_Sprite
@@ -42,6 +47,16 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 1262540893}
+    - target: {fileID: 8830159707385070679, guid: 80aef93b035bfca40887e19fc4733df9,
+        type: 3}
+      propertyPath: jumpSpeed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8830159707385070679, guid: 80aef93b035bfca40887e19fc4733df9,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 4.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8830159707385070683, guid: 80aef93b035bfca40887e19fc4733df9,
         type: 3}
       propertyPath: m_LocalScale.y
