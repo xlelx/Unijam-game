@@ -36,10 +36,13 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void LoadMenu() {
-
+        SceneManager.LoadScene(0);
     }
 
     public void Quit() {
-        SceneManager.LoadScene(0);
+        // Quitting inside the editor 
+        UnityEditor.EditorApplication.isPlaying = false;
+        // Qutting the application 
+        Application.Quit();
     }
 }
