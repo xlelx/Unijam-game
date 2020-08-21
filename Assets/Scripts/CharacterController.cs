@@ -51,7 +51,6 @@ public class CharacterController : MonoBehaviour
 
     bool isGrounded(){
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0f, Vector2.down, jumpBuffer, platformLayerMask);
-
         return raycastHit.collider != null;
     }
 }

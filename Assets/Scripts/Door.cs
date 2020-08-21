@@ -13,7 +13,6 @@ public class Door : MonoBehaviour
         doorCollider = this.GetComponent<BoxCollider2D>();
     }
 
-
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -28,6 +27,7 @@ public class Door : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+     
     }
+    
 }

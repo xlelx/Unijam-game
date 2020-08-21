@@ -6,7 +6,7 @@ public class PlayerPush : MonoBehaviour
 {
     public float distance = 1f;
     public LayerMask boxMask;
-
+    
     GameObject box;
 
     // Start is called before the first frame update
