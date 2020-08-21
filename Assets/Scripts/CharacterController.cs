@@ -14,6 +14,8 @@ public class CharacterController : MonoBehaviour
     //Buffer Distance from ground to enable jump
     public float jumpBuffer = 1f;
 
+    public Animator animator;
+
     [SerializeField]
     public bool invertDirection = false;
 
@@ -24,8 +26,11 @@ public class CharacterController : MonoBehaviour
     private float movement;
     private BoxCollider2D boxCollider;
 
+    private bool prevGrounded = true;
 
-    void Start(){
+    public bool canJump = true;
+    void Start()
+    {
         rb = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
     }
@@ -33,24 +38,55 @@ public class CharacterController : MonoBehaviour
     void Update()
     {
         //Horizontal movement
-        movement = Input.GetAxis("Horizontal") * (invertDirection ?  -1 : 1);
-        if (movement < 0f){
-            transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x) * -1, transform.localScale.y);
+        movement = Input.GetAxis("Horizontal") * (invertDirection ? -1 : 1);
+
+        animator.SetFloat("verticalSpeed", rb.velocity.y);
+
+        animator.SetFloat("speed", Mathf.Abs(movement * moveSpeed));
+
+        Transform pTransform = transform.parent.gameObject.transform;
+        if (movement < 0f)
+        {
+            pTransform.localScale = new Vector2(Mathf.Abs(pTransform.localScale.x) * -1, pTransform.localScale.y);
         }
-        else if (movement > 0f){
-            transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x), transform.localScale.y);
+        else if (movement > 0f)
+        {
+            pTransform.localScale = new Vector2(Mathf.Abs(pTransform.localScale.x), pTransform.localScale.y);
         }
         rb.velocity = new Vector2(movement * moveSpeed, rb.velocity.y);
 
 
-        //Jumping
-        if (isGrounded() && Input.GetButtonDown("Jump")){
-            rb.velocity = new Vector3(rb.velocity.x , rb.velocity.y + jumpSpeed);
+        //Check for jump
+        bool grounded = isGroundedAnim();
+        if (grounded && !prevGrounded) animator.SetBool("hasJumped", false);
+        prevGrounded = grounded;  
+
+        if (canJump && isGrounded() && Input.GetButtonDown("Jump"))
+        {
+            Jump(this.jumpSpeed);
         }
+
+        pTransform.position = transform.position;
+        transform.localPosition = Vector3.zero;
     }
 
-    bool isGrounded(){
+    public void Jump(float jumpSpeed)
+    {
+        animator.SetBool("hasJumped", true);
+        rb.velocity = new Vector3(rb.velocity.x, jumpSpeed);
+
+    }
+    bool isGrounded()
+    {
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0f, Vector2.down, jumpBuffer, platformLayerMask);
+
+        return raycastHit.collider != null;
+    }
+
+    bool isGroundedAnim(){
+        float extraHeight = 1f;
+        RaycastHit2D raycastHit = Physics2D.Raycast(boxCollider.bounds.center, Vector2.down, boxCollider.bounds.extents.y + extraHeight, platformLayerMask);
+
         return raycastHit.collider != null;
     }
 }
