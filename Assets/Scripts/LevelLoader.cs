@@ -12,8 +12,9 @@ public static class LevelLoader
         Level02,
         Level03,
         Level04,
+        CastleScene,
     }
-    public static Scene currentScene;
+    public static Scene currentScene = Scene.CastleScene;
     public static void Load(Scene scene){
         currentScene = scene;
         SceneManager.LoadScene(scene.ToString());
