@@ -1,10 +1,7 @@
 fileFormatVersion: 2
-guid: d94ca19472f619345b317c7654245cd3
+guid: 4618c8c91871c414686938bb8d887431
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -3294574253389157637
-    second: Jump (78x58)_0
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -88,28 +85,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Jump (78x58)_0
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 14
-        width: 37
-        height: 29
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bfa67940c225742d0800000000000000
-      internalID: -3294574253389157637
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
