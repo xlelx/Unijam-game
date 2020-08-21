@@ -42,6 +42,11 @@ public class CameraController : MonoBehaviour
         Zoom();
     }
 
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.R)){
+            LevelLoader.RestartLevel();
+        }
+    }
     void Zoom()
     {
         float newZoom = Mathf.Lerp(maxZoom, minZoom, cameraHeight / zoomLimiter);
@@ -56,7 +61,7 @@ public class CameraController : MonoBehaviour
         Vector2 newPosition = cameraCenter + offset;
 
         //change transform.position.x to newPosition.x if we want the camera to center around the x axis as well
-        transform.position = Vector3.SmoothDamp(transform.position, new Vector3(transform.position.x, newPosition.y, -10), ref velocity, smoothTime);
+        transform.position = Vector3.SmoothDamp(transform.position, new Vector3(newPosition.x, newPosition.y, -10), ref velocity, smoothTime);
 
     }
 }
