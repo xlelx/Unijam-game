@@ -33,9 +33,13 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void RestartLevel() {
+        Time.timeScale = 1f;
+        gamePause = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void LoadMenu() {
+        Time.timeScale = 1f;
+        gamePause = false;
         SceneManager.LoadScene(0);
     }
 
