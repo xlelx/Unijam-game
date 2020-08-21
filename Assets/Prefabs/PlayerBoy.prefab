@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallMultiplier: 10
-  lowJumpMultiplier: 4
+  lowJumpMultiplier: 7
 --- !u!114 &8830159707385070679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,14 +112,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 590058adfd606ab4581c5548920fe1f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
-  jumpSpeed: 10
+  moveSpeed: 4.5
+  jumpSpeed: 7
   jumpBuffer: 1
   animator: {fileID: 8830159707385070676}
   invertDirection: 0
   platformLayerMask:
     serializedVersion: 2
     m_Bits: 256
+  canJump: 1
 --- !u!61 &8830159707385070678
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -196,7 +197,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8830159708481751815}
   m_Layer: 0
-  m_Name: Player
+  m_Name: PlayerBoy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
