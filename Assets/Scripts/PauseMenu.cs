@@ -1,15 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
     // Start is called before the first frame update
-    public static bool GamePause = false;
+    public static bool gamePause = false;
     public KeyCode pauseButton;
+    public GameObject pauseMenuUI;
+
     private void Update() {
         if(Input.GetKeyDown(pauseButton)) {
-            if (GamePause) {
+            if (gamePause) {
                 Resume();
             } else {
                 Pause();
@@ -17,11 +20,26 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    void Resume() {
-        
+    public void Resume() {
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+        gamePause = false;
     }
 
-    void Pause() {
+    public void Pause() {
+        pauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        gamePause = true;
+    }
 
+    public void RestartLevel() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+    public void LoadMenu() {
+
+    }
+
+    public void Quit() {
+        SceneManager.LoadScene(0);
     }
 }
