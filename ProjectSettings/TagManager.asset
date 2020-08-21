@@ -4,12 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-<<<<<<< HEAD
-  - Background
-=======
-  - Platform
   - Box
->>>>>>> develop
+  - Platform
   layers:
   - Default
   - TransparentFX
@@ -19,15 +15,9 @@ TagManager:
   - UI
   - 
   - 
-<<<<<<< HEAD
-  - Background
-  - Main
-  - 
-=======
-  - Player
   - Platform
-  - Pushable
->>>>>>> develop
+  - 
+  - 
   - 
   - 
   - 
@@ -51,18 +41,8 @@ TagManager:
   - 
   m_SortingLayers:
   - name: Background
-<<<<<<< HEAD
-    uniqueID: 2212022765
-=======
     uniqueID: 3887571455
->>>>>>> develop
     locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Main
-    uniqueID: 199725517
-    locked: 0
-  - name: Foreground
-    uniqueID: 322286663
     locked: 0
