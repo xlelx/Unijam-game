@@ -36,7 +36,8 @@ public class PlayerPush : MonoBehaviour
             animator.SetBool("isPushing", true);
             // Attach box with the player 
             box.GetComponent<FixedJoint2D>().enabled = true;
-            box.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            box.GetComponent<BoxMove>().beingPushed = true;
+            //box.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             box.GetComponent<FixedJoint2D>().connectedBody = this.GetComponent<Rigidbody2D>();
 
         } else if (hitLeft.collider != null && Input.GetKeyDown(KeyCode.E)) 
@@ -48,7 +49,8 @@ public class PlayerPush : MonoBehaviour
             animator.SetBool("isPushing", true);
             
             box.GetComponent<FixedJoint2D>().enabled = true;
-            box.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            box.GetComponent<BoxMove>().beingPushed = true;
+            //box.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             box.GetComponent<FixedJoint2D>().connectedBody = this.GetComponent<Rigidbody2D>();
         }
         else if(Input.GetKeyUp(KeyCode.E))
@@ -57,8 +59,9 @@ public class PlayerPush : MonoBehaviour
             GetComponent<CharacterController>().canJump = true;
             animator.SetBool("isPushing", false);
             // Detach the box from the player 
+            box.GetComponent<BoxMove>().beingPushed = false;
             box.GetComponent<FixedJoint2D>().enabled = false;
-            box.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+            //box.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
 
         }
     }

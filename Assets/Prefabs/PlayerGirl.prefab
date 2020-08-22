@@ -19,6 +19,23 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5710924404910448085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2817012077072298015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71d3d07c1716d3c4c886cef4080cb55e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 0.6
+  boxMask:
+    serializedVersion: 2
+    m_Bits: 512
+  animator: {fileID: 1262540893}
 --- !u!1001 &6742749521815974981
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57,6 +74,11 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 4.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8830159707385070679, guid: 80aef93b035bfca40887e19fc4733df9,
+        type: 3}
+      propertyPath: platformLayerMask.m_Bits
+      value: 768
+      objectReference: {fileID: 0}
     - target: {fileID: 8830159707385070683, guid: 80aef93b035bfca40887e19fc4733df9,
         type: 3}
       propertyPath: m_LocalScale.y
@@ -67,6 +89,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerGirl
       objectReference: {fileID: 0}
+    - target: {fileID: 8830159708481751814, guid: 80aef93b035bfca40887e19fc4733df9,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 8830159708481751815, guid: 80aef93b035bfca40887e19fc4733df9,
         type: 3}
       propertyPath: m_LocalPosition.x
