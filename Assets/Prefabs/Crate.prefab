@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 228983780120916966}
   - component: {fileID: 228983780120916965}
   - component: {fileID: 228983780120916964}
-  m_Layer: 10
-  m_Name: big-crate (1)
+  - component: {fileID: 5341645961166403775}
+  m_Layer: 9
+  m_Name: Crate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,3 +150,16 @@ FixedJoint2D:
   m_ConnectedAnchor: {x: -4.78, y: -2.56}
   m_DampingRatio: 0
   m_Frequency: 0
+--- !u!114 &5341645961166403775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228983780120916955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ef269b4da4cb964da7b29e52b9bb455, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beingPushed: 0

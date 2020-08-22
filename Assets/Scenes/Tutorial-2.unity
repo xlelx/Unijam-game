@@ -128,6 +128,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1038067665781169572, guid: 80aef93b035bfca40887e19fc4733df9,
+        type: 3}
+      propertyPath: button
+      value: 113
+      objectReference: {fileID: 0}
     - target: {fileID: 8830159707385070683, guid: 80aef93b035bfca40887e19fc4733df9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -281,6 +286,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &440098004 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 228983780120916955, guid: cc8d86fbcf8d38d4d94c6a23f79c5824,
+    type: 3}
+  m_PrefabInstance: {fileID: 1050883265}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &440098005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440098004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ef269b4da4cb964da7b29e52b9bb455, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beingPushed: 0
 --- !u!1001 &617806901
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -362,6 +386,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crate
       objectReference: {fileID: 0}
+    - target: {fileID: 228983780120916955, guid: cc8d86fbcf8d38d4d94c6a23f79c5824,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 228983780120916960, guid: cc8d86fbcf8d38d4d94c6a23f79c5824,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -415,6 +444,11 @@ PrefabInstance:
     - target: {fileID: 228983780120916960, guid: cc8d86fbcf8d38d4d94c6a23f79c5824,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 228983780120916965, guid: cc8d86fbcf8d38d4d94c6a23f79c5824,
+        type: 3}
+      propertyPath: m_BodyType
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -488,6 +522,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91a04b87b8c3cad48b9a7a8eb95e8881, type: 3}
+--- !u!1 &827884259 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 228983780120916955, guid: cc8d86fbcf8d38d4d94c6a23f79c5824,
+    type: 3}
+  m_PrefabInstance: {fileID: 725021274}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &827884260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827884259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ef269b4da4cb964da7b29e52b9bb455, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beingPushed: 0
 --- !u!1 &900907108
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,6 +669,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crate (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 228983780120916955, guid: cc8d86fbcf8d38d4d94c6a23f79c5824,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 228983780120916960, guid: cc8d86fbcf8d38d4d94c6a23f79c5824,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -669,6 +727,11 @@ PrefabInstance:
     - target: {fileID: 228983780120916960, guid: cc8d86fbcf8d38d4d94c6a23f79c5824,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 228983780120916965, guid: cc8d86fbcf8d38d4d94c6a23f79c5824,
+        type: 3}
+      propertyPath: m_BodyType
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -6476,6 +6539,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlayerGirl
+      objectReference: {fileID: 0}
+    - target: {fileID: 5710924404910448085, guid: 28812b24f06276f4ea761635723cb8e9,
+        type: 3}
+      propertyPath: button
+      value: 101
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28812b24f06276f4ea761635723cb8e9, type: 3}

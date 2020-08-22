@@ -36,7 +36,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   animator: {fileID: 1262540893}
-  BoyKeyBindings: 1
+  button: 101
 --- !u!1001 &6742749521815974981
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@ public class PlayerPush : MonoBehaviour
 
     public Animator animator;
     
-    public bool BoyKeyBindings = true;
+    public KeyCode button;
     GameObject box;
 
     // Start is called before the first frame update
@@ -21,7 +21,7 @@ public class PlayerPush : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        KeyCode key = BoyKeyBindings ? KeyCode.Q : KeyCode.E; 
+        
         //Physics2D.queriesStartInColliders = false;
         RaycastHit2D hitRight = Physics2D.Raycast(transform.position,
             Vector2.right * transform.localScale.x, distance, boxMask);
@@ -29,7 +29,7 @@ public class PlayerPush : MonoBehaviour
         RaycastHit2D hitLeft = Physics2D.Raycast(transform.position,
             Vector2.left * transform.localScale.x, distance, boxMask);
 
-        if(hitRight.collider != null && Input.GetKeyDown(key))
+        if(hitRight.collider != null && Input.GetKeyDown(button))
         {
             // Get the game object it hit with 
             box = hitRight.collider.gameObject;
@@ -42,7 +42,7 @@ public class PlayerPush : MonoBehaviour
             //box.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             box.GetComponent<FixedJoint2D>().connectedBody = this.GetComponent<Rigidbody2D>();
 
-        } else if (hitLeft.collider != null && Input.GetKeyDown(key)) 
+        } else if (hitLeft.collider != null && Input.GetKeyDown(button)) 
         {
             // Do the same steps as previous except for the left side 
             box = hitLeft.collider.gameObject;
@@ -55,7 +55,7 @@ public class PlayerPush : MonoBehaviour
             //box.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             box.GetComponent<FixedJoint2D>().connectedBody = this.GetComponent<Rigidbody2D>();
         }
-        else if(Input.GetKeyUp(KeyCode.E))
+        else if(Input.GetKeyUp(button))
         {
             // Enable player jump and disable animation 
             GetComponent<CharacterController>().canJump = true;
