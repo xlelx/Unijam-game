@@ -11,6 +11,7 @@ public class JumpPad : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "Player"){
             CharacterController playerScript = other.gameObject.GetComponent<CharacterController>();
+            SoundManagerScript.PlaySound("jumpPad");
             playerScript.Jump(jumpSpeed);
         }
     }

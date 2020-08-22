@@ -47,10 +47,12 @@ public class CharacterController : MonoBehaviour
         Transform pTransform = transform.parent.gameObject.transform;
         if (movement < 0f)
         {
+            SoundManagerScript.PlaySound("walk");
             pTransform.localScale = new Vector2(Mathf.Abs(pTransform.localScale.x) * -1, pTransform.localScale.y);
         }
         else if (movement > 0f)
         {
+            SoundManagerScript.PlaySound("walk");
             pTransform.localScale = new Vector2(Mathf.Abs(pTransform.localScale.x), pTransform.localScale.y);
         }
         rb.velocity = new Vector2(movement * moveSpeed, rb.velocity.y);
@@ -60,10 +62,12 @@ public class CharacterController : MonoBehaviour
         bool grounded = isGroundedAnim();
         if (grounded && !prevGrounded) animator.SetBool("hasJumped", false);
         else if (grounded && rb.velocity.y == 0) animator.SetBool("hasJumped", false);
-        prevGrounded = grounded;  
+        prevGrounded = grounded;
 
         if (canJump && isGrounded() && Input.GetButtonDown("Jump"))
         {
+            SoundManagerScript.PlaySound("jump");
+
             Jump(this.jumpSpeed);
         }
 
@@ -74,6 +78,7 @@ public class CharacterController : MonoBehaviour
     public void Jump(float jumpSpeed)
     {
         animator.SetBool("hasJumped", true);
+
         rb.velocity = new Vector3(rb.velocity.x, jumpSpeed);
 
     }
@@ -84,7 +89,8 @@ public class CharacterController : MonoBehaviour
         return raycastHit.collider != null;
     }
 
-    bool isGroundedAnim(){
+    bool isGroundedAnim()
+    {
         float extraHeight = 1f;
         RaycastHit2D raycastHit = Physics2D.Raycast(boxCollider.bounds.center, Vector2.down, boxCollider.bounds.extents.y + extraHeight, platformLayerMask);
 

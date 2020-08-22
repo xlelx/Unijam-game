@@ -18,6 +18,7 @@ public class BoxMove : MonoBehaviour
     {
         if(beingPushed) {
             xPos = transform.position.x;
+            SoundManagerScript.PlaySound("push");
         } else {
             transform.position = new Vector3(xPos, transform.position.y);
         }
