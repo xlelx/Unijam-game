@@ -21,25 +21,42 @@ public class PlayerPush : MonoBehaviour
     void Update()
     {
         //Physics2D.queriesStartInColliders = false;
-        RaycastHit2D hit = Physics2D.Raycast(transform.position,
+        RaycastHit2D hitRight = Physics2D.Raycast(transform.position,
             Vector2.right * transform.localScale.x, distance, boxMask);
 
+        RaycastHit2D hitLeft = Physics2D.Raycast(transform.position,
+            Vector2.left * transform.localScale.x, distance, boxMask);
 
-        if(hit.collider != null && Input.GetKeyDown(KeyCode.E))
+        if(hitRight.collider != null && Input.GetKeyDown(KeyCode.E))
         {
-            //Debug.Log("Reach");
-            box = hit.collider.gameObject;
+            // Get the game object it hit with 
+            box = hitRight.collider.gameObject;
+            // Ensure the player cannot jump & play animations 
             GetComponent<CharacterController>().canJump = false;
             animator.SetBool("isPushing", true);
+            // Attach box with the player 
             box.GetComponent<FixedJoint2D>().enabled = true;
             box.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-
             box.GetComponent<FixedJoint2D>().connectedBody = this.GetComponent<Rigidbody2D>();
-        } 
+
+        } else if (hitLeft.collider != null && Input.GetKeyDown(KeyCode.E)) 
+        {
+            // Do the same steps as previous except for the left side 
+            box = hitLeft.collider.gameObject;
+
+            GetComponent<CharacterController>().canJump = false;
+            animator.SetBool("isPushing", true);
+            
+            box.GetComponent<FixedJoint2D>().enabled = true;
+            box.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            box.GetComponent<FixedJoint2D>().connectedBody = this.GetComponent<Rigidbody2D>();
+        }
         else if(Input.GetKeyUp(KeyCode.E))
         {
+            // Enable player jump and disable animation 
             GetComponent<CharacterController>().canJump = true;
             animator.SetBool("isPushing", false);
+            // Detach the box from the player 
             box.GetComponent<FixedJoint2D>().enabled = false;
             box.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
 
