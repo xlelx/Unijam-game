@@ -6,6 +6,8 @@ public class PlayerPush : MonoBehaviour
 {
     public float distance = 1f;
     public LayerMask boxMask;
+
+    public Animator animator;
     
     GameObject box;
 
@@ -21,12 +23,14 @@ public class PlayerPush : MonoBehaviour
         //Physics2D.queriesStartInColliders = false;
         RaycastHit2D hit = Physics2D.Raycast(transform.position,
             Vector2.right * transform.localScale.x, distance, boxMask);
+        
 
         if(hit.collider != null && Input.GetKeyDown(KeyCode.E))
         {
             //Debug.Log("Reach");
             box = hit.collider.gameObject;
-
+            GetComponent<CharacterController>().canJump = false;
+            animator.SetBool("isPushing", true);
             box.GetComponent<FixedJoint2D>().enabled = true;
             box.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
 
@@ -34,6 +38,8 @@ public class PlayerPush : MonoBehaviour
         } 
         else if(Input.GetKeyUp(KeyCode.E))
         {
+            GetComponent<CharacterController>().canJump = true;
+            animator.SetBool("isPushing", false)
             box.GetComponent<FixedJoint2D>().enabled = false;
             box.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
 
