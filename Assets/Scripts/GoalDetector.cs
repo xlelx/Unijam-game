@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GoalDetector : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class GoalDetector : MonoBehaviour
     private void Update() {
         if (numInGoal == 2){
             //TODO animations or somestuff before loading the next level
-            LevelLoader.Load(LevelLoader.Scene.Menu);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             Debug.Log("Level Complete!");
         }    
     }
