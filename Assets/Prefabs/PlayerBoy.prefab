@@ -120,7 +120,7 @@ MonoBehaviour:
   invertDirection: 0
   platformLayerMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 768
   canJump: 1
 --- !u!61 &8830159707385070678
 BoxCollider2D:

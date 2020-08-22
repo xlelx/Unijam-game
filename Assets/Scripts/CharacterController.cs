@@ -59,6 +59,7 @@ public class CharacterController : MonoBehaviour
         //Check for jump
         bool grounded = isGroundedAnim();
         if (grounded && !prevGrounded) animator.SetBool("hasJumped", false);
+        else if (grounded && rb.velocity.y == 0) animator.SetBool("hasJumped", false);
         prevGrounded = grounded;  
 
         if (canJump && isGrounded() && Input.GetButtonDown("Jump"))
