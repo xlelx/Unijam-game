@@ -23,7 +23,7 @@ public class PlayerPush : MonoBehaviour
         //Physics2D.queriesStartInColliders = false;
         RaycastHit2D hit = Physics2D.Raycast(transform.position,
             Vector2.right * transform.localScale.x, distance, boxMask);
-        
+
 
         if(hit.collider != null && Input.GetKeyDown(KeyCode.E))
         {
@@ -39,7 +39,7 @@ public class PlayerPush : MonoBehaviour
         else if(Input.GetKeyUp(KeyCode.E))
         {
             GetComponent<CharacterController>().canJump = true;
-            animator.SetBool("isPushing", false)
+            animator.SetBool("isPushing", false);
             box.GetComponent<FixedJoint2D>().enabled = false;
             box.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
 
