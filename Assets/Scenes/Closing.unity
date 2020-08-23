@@ -5879,7 +5879,7 @@ PrefabInstance:
         type: 3}
       propertyPath: newMusic
       value: 
-      objectReference: {fileID: 8300000, guid: 6612f5c1451e1b8498ed1a843e1aa86d, type: 3}
+      objectReference: {fileID: 8300000, guid: 5257ceb4700a9f24399e8891f8c0225c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2eadb96339f0ec84c8354f0dbb6c00cd, type: 3}
 --- !u!1 &891272566
