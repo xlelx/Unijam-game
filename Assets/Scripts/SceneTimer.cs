@@ -7,6 +7,8 @@ public class SceneTimer : MonoBehaviour
 {
     // Start is called before the first frame update
 
+    public LevelLoader levelLoader;
+
     public float time = 10f;
     void Start()
     {
@@ -18,7 +20,7 @@ public class SceneTimer : MonoBehaviour
     {
         time -= Time.deltaTime;
         if (time <= 0 ){
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            levelLoader.LoadNextLevel();
 
         }
     }

@@ -10,6 +10,8 @@ public class GoalDetector : MonoBehaviour
 
     private Animator animator;
 
+    public LevelLoader levelLoader;
+
     private void Start(){
         animator = GetComponent<Animator>();
         animator.SetBool("isOpen", portalOpen);
@@ -19,7 +21,7 @@ public class GoalDetector : MonoBehaviour
         if (portalOpen && numInGoal == 2){
             //TODO animations or somestuff before loading the next level
             SoundManagerScript.PlaySound("portal");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            levelLoader.LoadNextLevel();
             Debug.Log("Level Complete!");
         }    
 

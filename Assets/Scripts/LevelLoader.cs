@@ -3,24 +3,34 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public static class LevelLoader
+public class LevelLoader : MonoBehaviour
 {
+    private Animator transition;
+
     
-    public enum Scene {
-        Menu,
-        Level01,
-        Level02,
-        Level03,
-        Level04,
-        CastleScene,
-    }
-    public static Scene currentScene = Scene.CastleScene;
-    public static void Load(Scene scene){
-        currentScene = scene;
-        SceneManager.LoadScene(scene.ToString());
+    public float fadeTime = 2f;
+
+    private void Awake() {
+        transition = GetComponent<Animator>();    
     }
 
-    public static void RestartLevel(){
-        SceneManager.LoadScene(currentScene.ToString());
+    public void RestartLevel(){
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex));
+
+    }
+    public void LoadNextLevel(){
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+    }
+
+    public void LoadMenu(){
+        StartCoroutine(LoadLevel(0));
+    }
+
+    IEnumerator LoadLevel(int levelIndex){
+        transition.SetTrigger("FadeOut");
+
+        yield return new WaitForSeconds(fadeTime);
+
+        SceneManager.LoadScene(levelIndex);
     }
 }

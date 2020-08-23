@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-
+    public LevelLoader levelLoader;
     BoxCollider2D doorCollider;
     Animator animator;
     // Start is called before the first frame update
@@ -29,6 +29,8 @@ public class Door : MonoBehaviour
         if (other.tag == "Player") {
             animator.SetBool("openDoor", false);
             other.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            levelLoader.LoadNextLevel();
+
         }
     }
 
