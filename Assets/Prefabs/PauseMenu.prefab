@@ -460,6 +460,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseButton: 27
   pauseMenuUI: {fileID: 1252348665169725383}
+  levelLoader: {fileID: 0}
 --- !u!1 &1252348664609917235
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class CreditTransition : MonoBehaviour
 {
+    public LevelLoader levelLoader;
     public float time = 10f;
     void Start()
     {
@@ -16,7 +17,7 @@ public class CreditTransition : MonoBehaviour
     {
         time -= Time.deltaTime;
         if (time <= 0 ){
-            SceneManager.LoadScene(0);
+            levelLoader.LoadMenu();
 
         }
     }
