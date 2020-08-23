@@ -217,9 +217,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b309e7bd922525445a2083d61a691b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: {x: 0, y: 0}
+  offset: {x: 3, y: 0}
   smoothTime: 0.5
-  minZoom: 40
+  minZoom: 28
   maxZoom: 10
   zoomLimiter: 50
   player1: {fileID: 350099846}
@@ -27486,8 +27486,8 @@ Tilemap:
   - first: {x: -15, y: 11, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -44270,9 +44270,9 @@ Tilemap:
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 262
+  - m_RefCount: 263
     m_Data: {fileID: 11400000, guid: aa8184d1efc5bb747810236e752b88be, type: 2}
-  - m_RefCount: 4257
+  - m_RefCount: 4256
     m_Data: {fileID: 11400000, guid: 5e858f06c49a900429d9c0193ed55ec5, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 546d6b4ddbf188746aab68b737a9b802, type: 2}
@@ -44285,10 +44285,10 @@ Tilemap:
   - m_RefCount: 13
     m_Data: {fileID: 11400000, guid: 58ed9daec588bec45a23b86435180859, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 262
+  - m_RefCount: 263
     m_Data: {fileID: 8969087632853882348, guid: 2b3431d056fd119458171adbefff7b4b,
       type: 3}
-  - m_RefCount: 4257
+  - m_RefCount: 4256
     m_Data: {fileID: 5550582127777731385, guid: 2b3431d056fd119458171adbefff7b4b,
       type: 3}
   - m_RefCount: 1
