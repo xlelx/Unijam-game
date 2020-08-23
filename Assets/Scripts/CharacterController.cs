@@ -66,7 +66,11 @@ public class CharacterController : MonoBehaviour
 
         if (canJump && isGrounded() && Input.GetButtonDown("Jump"))
         {
+            Debug.Log("Jumping");
+
             SoundManagerScript.PlaySound("jump");
+            
+
 
             Jump(this.jumpSpeed);
         }
@@ -78,8 +82,11 @@ public class CharacterController : MonoBehaviour
     public void Jump(float jumpSpeed)
     {
         animator.SetBool("hasJumped", true);
+        
+
 
         rb.velocity = new Vector3(rb.velocity.x, jumpSpeed);
+
 
     }
     bool isGrounded()
