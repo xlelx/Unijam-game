@@ -28,6 +28,7 @@ public class OpeningScene : MonoBehaviour
             // Set the animation 
             hanselAnim.SetFloat("speed", Mathf.Abs(3 * 3));
             gretelAnim.SetFloat("speed", Mathf.Abs(3 * 3));
+            SoundManagerScript.PlaySound("walk");
         }
     }
 }

@@ -20,9 +20,6 @@ public class Door : MonoBehaviour
         {
             // Door opening animation here 
             animator.SetBool("openDoor", true);
-            
-            
-
         }
 
     }
