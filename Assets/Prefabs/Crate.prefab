@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6073342635324978016}
   - component: {fileID: 6073342635324978023}
   m_Layer: 9
-  m_Name: Crate 1
+  m_Name: Crate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -131,7 +131,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!255 &6073342635324978016
 FixedJoint2D:
   m_ObjectHideFlags: 0
