@@ -42,11 +42,6 @@ public class CameraController : MonoBehaviour
         Zoom();
     }
 
-    private void Update() {
-        if (Input.GetKeyDown(KeyCode.R)){
-            LevelLoader.RestartLevel();
-        }
-    }
     void Zoom()
     {
         float newZoom = Mathf.Lerp(maxZoom, minZoom, cameraHeight / zoomLimiter);

@@ -10,6 +10,8 @@ public class PauseMenu : MonoBehaviour
     public KeyCode pauseButton;
     public GameObject pauseMenuUI;
 
+    public LevelLoader levelLoader;
+
     private void Update() {
         if(Input.GetKeyDown(pauseButton)) {
             if (gamePause) {
@@ -35,12 +37,12 @@ public class PauseMenu : MonoBehaviour
     public void RestartLevel() {
         Time.timeScale = 1f;
         gamePause = false;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        levelLoader.RestartLevel();
     }
     public void LoadMenu() {
         Time.timeScale = 1f;
         gamePause = false;
-        SceneManager.LoadScene(0);
+        levelLoader.LoadMenu();
     }
 
     public void Quit() {
