@@ -13,13 +13,14 @@ public class GoalDetector : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             Debug.Log("Level Complete!");
         }    
+        
     }
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "Player"){
             numInGoal++;
         }
     }
-    
+
     private void OnTriggerExit2D(Collider2D other) {
         if (other.tag == "Player"){
             numInGoal--;
