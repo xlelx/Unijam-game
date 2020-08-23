@@ -6,7 +6,7 @@ public class SoundManagerScript : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public static AudioClip walkSound, pushSound, jumpSound, jumpPadSound, clickSound;
+    public static AudioClip walkSound, pushSound, jumpSound, jumpPadSound, clickSound, portalSound;
 
     private static SoundManagerScript instance;
 
@@ -24,12 +24,14 @@ public class SoundManagerScript : MonoBehaviour
         jumpSound = Resources.Load<AudioClip>("jump");
         jumpPadSound = Resources.Load<AudioClip>("jumpPad");
         clickSound = Resources.Load<AudioClip>("click");
-
+        portalSound = Resources.Load<AudioClip>("portal");
         audioSource = GetComponent<AudioSource>();
 
     }
-    private void Update() {
-        if (audioSource.isPlaying == false){
+    private void Update()
+    {
+        if (audioSource.isPlaying == false)
+        {
             currentClips = new ArrayList();
         }
     }
@@ -70,9 +72,21 @@ public class SoundManagerScript : MonoBehaviour
                 case "click":
                     audioSource.PlayOneShot(clickSound);
                     break;
+                case "portal":
+                    audioSource.PlayOneShot(portalSound);
+                    break;
             }
 
         }
 
+    }
+
+    public void Click()
+    {
+        if (!currentClips.Contains("click"))
+        {
+            currentClips.Add("click");
+            audioSource.PlayOneShot(clickSound);
+        }
     }
 }

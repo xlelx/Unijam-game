@@ -9,6 +9,7 @@ public class GoalDetector : MonoBehaviour
     private void Update() {
         if (numInGoal == 2){
             //TODO animations or somestuff before loading the next level
+            SoundManagerScript.PlaySound("portal");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             Debug.Log("Level Complete!");
         }    
