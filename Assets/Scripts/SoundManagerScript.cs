@@ -11,11 +11,6 @@ public class SoundManagerScript : MonoBehaviour
     private static SoundManagerScript instance;
 
     private static ArrayList currentClips = new ArrayList();
-    public static SoundManagerScript GetInstance()
-    {
-        return instance;
-    }
-
     private static AudioSource audioSource;
     void Start()
     {
@@ -37,19 +32,6 @@ public class SoundManagerScript : MonoBehaviour
         {
             currentClips = new ArrayList();
         }
-    }
-    void Awake()
-    {
-        if (instance != null && instance != this)
-        {
-            Destroy(this.gameObject);
-            return;
-        }
-        else
-        {
-            instance = this;
-        }
-        DontDestroyOnLoad(this.gameObject);
     }
 
     // Update is called once per frame
