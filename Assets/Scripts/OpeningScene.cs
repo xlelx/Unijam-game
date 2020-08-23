@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class OpeningScene : MonoBehaviour
 {
+    // Characters 
     public Rigidbody2D hansel;
     public Rigidbody2D gretel;
+    // Animators 
     public Animator hanselAnim;
     public Animator gretelAnim;
+
+    // Texts 
+    
     bool playingAnimation = false;
     public void playScene() {
         playingAnimation = true; 
