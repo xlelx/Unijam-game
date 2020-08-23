@@ -5773,6 +5773,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal
       objectReference: {fileID: 0}
+    - target: {fileID: 7227098003878224595, guid: 91a04b87b8c3cad48b9a7a8eb95e8881,
+        type: 3}
+      propertyPath: levelLoader
+      value: 
+      objectReference: {fileID: 1729604194}
     - target: {fileID: 7227098003878224598, guid: 91a04b87b8c3cad48b9a7a8eb95e8881,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10598,6 +10603,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1729604192}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1729604194 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2511664042083106191, guid: b0b7ecfdd40bd8043a521ce410fe0e40,
+    type: 3}
+  m_PrefabInstance: {fileID: 1729604192}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b396f383dceea489e32aed593b75d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2069962285
 PrefabInstance:
   m_ObjectHideFlags: 0
