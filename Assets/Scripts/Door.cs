@@ -15,7 +15,9 @@ public class Door : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Door opening animation here 
-
+        if(collision.tag == "Player") {
+            
+        }
     }
 
     
