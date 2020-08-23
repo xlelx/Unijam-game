@@ -35,6 +35,15 @@ public class SoundManagerScript : MonoBehaviour
     }
     void Awake()
     {
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        else
+        {
+            instance = this;
+        }
         DontDestroyOnLoad(this.gameObject);
     }
 
