@@ -5093,7 +5093,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerGirl
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2817012077072298002, guid: 28812b24f06276f4ea761635723cb8e9, type: 3}
+    - {fileID: 2817012077072298005, guid: 28812b24f06276f4ea761635723cb8e9, type: 3}
+    - {fileID: 5710924404910448085, guid: 28812b24f06276f4ea761635723cb8e9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 28812b24f06276f4ea761635723cb8e9, type: 3}
 --- !u!95 &385174935 stripped
 Animator:
@@ -10225,7 +10228,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8830159707385070672, guid: 80aef93b035bfca40887e19fc4733df9, type: 3}
+    - {fileID: 8830159707385070679, guid: 80aef93b035bfca40887e19fc4733df9, type: 3}
+    - {fileID: 1038067665781169572, guid: 80aef93b035bfca40887e19fc4733df9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 80aef93b035bfca40887e19fc4733df9, type: 3}
 --- !u!95 &1124266091 stripped
 Animator:
