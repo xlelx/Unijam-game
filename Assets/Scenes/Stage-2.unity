@@ -29984,7 +29984,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b309e7bd922525445a2083d61a691b19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: {x: 0, y: 0}
+  offset: {x: 3, y: 0}
   smoothTime: 0.5
   minZoom: 20
   maxZoom: 6
